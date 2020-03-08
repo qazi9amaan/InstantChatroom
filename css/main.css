@@ -1,0 +1,101 @@
+body {
+    background-color: #ebebeb;
+    background-size: cover;
+    font-family: Montserrat;
+}
+
+.login-block {
+    width: 359px;
+    padding: 42px;
+    padding-top: 60px;
+    padding-bottom: 51px;
+    border-radius: 11px;
+    margin: 58px auto;
+	background:#fff;
+   
+}
+
+.fullname,.username,.password{
+    width: 100%;
+    height: 42px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #555;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-family: Montserrat;
+    padding: 0 20px 0 50px;
+    outline: none;
+}
+
+.fullname {
+    background: #fff url('../images/5.png') 20px top no-repeat;
+    background-size: 16px 80px;
+}
+.fullname:focus {
+    background: #fff url('../images/5.png') 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+.username {
+    background: #fff url('../images/4.png') 20px top no-repeat;
+    background-size: 16px 80px;
+}
+.username:focus {
+    background: #fff url('../images/4.png') 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+.password {
+    background: #fff url('../images/3.png') 20px top no-repeat;
+    background-size: 16px 80px;
+}
+.password:focus {
+    background: #fff url('../images/3.png') 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input:active, .login-block input:focus {
+    border: 1px solid #555;
+}
+
+.login {
+    width: 100%;
+    height: 40px;
+    background: #555;
+    box-sizing: border-box;
+    border-radius: 24px;
+    border: 1px solid #555;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: Montserrat;
+    outline: none;
+    cursor: pointer;
+}
+.login:hover {
+    background: #fff;
+    border: 1px solid #555;
+    color: #555;
+
+}
+
+.logo{
+    width:120px; 
+    height:120px; 
+    margin:auto; 
+
+    
+    border-radius:50%; 
+    margin-bottom:20px;}
+
+.logo img{width:100%; 
+    height:100%; 
+    border-radius:50%} 
+#hide,#show{
+    cursor:pointer}
+
+p{
+    margin-top: 8px;
+}
