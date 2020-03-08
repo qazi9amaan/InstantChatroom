@@ -1,5 +1,27 @@
+<?php
+  include('php/config.php');
+
+  if (isset($_REQUEST["newreg"]))
+  {
+      $rf=$_POST["reg_fullname"];
+      $ru=$_POST["reg_username"];
+      $rp=$_POST["reg_password"];
+            
+      if (mysqli_query($con, "insert into user (regfullname,regusername,regpassword) values ('$rf','$ru','$rp')")) 
+      {
+        header('location:index.php');
+      }else
+      {
+        echo "Error: ". mysqli_error($con);
+      }
+  }
+  mysqli_close($con);
+?>
+
+
 <!doctype html>
 <html lang="en">
+
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -29,10 +51,10 @@
       <div class="logo">
        <img src="images/logo.png">
       </div>
-      <form action="check-login.php" method="post">
-        <input type="text" placeholder="Username" id="username" name="username" class="username"/>
-        <input type="password" placeholder="Password" id="password" name="password" class="password"/>
-        <input type="submit" value="Log In" id="loginbutton" name="loginbutton" class="login"/>
+      <form action="php/check-login.php" method="post">
+        <input required type="text" placeholder="Username" id="username" name="username" class="username"/>
+        <input required type="password" placeholder="Password" id="password" name="password" class="password"/>
+        <input  type="submit" value="Log In" id="loginbutton" name="loginbutton" class="login"/>
       </form>
       <p style="text-align:center; font-size:14px">Not registered ? <strong style="color:#ff656c" id="show" >Create an account</strong></p>
   </div>
@@ -42,15 +64,15 @@
       <div class="logo">
         <img src="images/logo.png"/>
       </div>
-    <form action="" method="post">    
-        <input type="text" placeholder="Full Name" id="reg_fullname" name="reg_fullname" class="fullname"/>
-        <input type="text" placeholder="Username" id="reg_username" name="reg_username" class="username" />
-        <input type="password" placeholder="Password" id="reg_password" name="reg_password" class="password" />
+    <form action="index.php" method="post">    
+        <input required type="text" placeholder="Full Name" id="reg_fullname" name="reg_fullname" class="fullname"/>
+        <input required  type="text" placeholder="Username" id="reg_username" name="reg_username" class="username" />
+        <input required type="password" placeholder="Password" id="reg_password" name="reg_password" class="password" />
       <input type="submit" value="Register" id="newreg" name="newreg" class="login"/>
     </form>
       <p style="text-align:center; font-size:14px">Have an account ? <strong style="color:#08C400" id="hide">Sign In</strong></p>
-
-
+    
+    
 
 
     
